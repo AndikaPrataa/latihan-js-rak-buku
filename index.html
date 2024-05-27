@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Application</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bookshelf Application</h1>
+        </header>
+
+        <section class="input-section">
+            <div class="form-wrapper">
+                <h2>Add New Book</h2>
+                <form id="bookForm" action="" method="post">
+                    <div class="input-group">
+                        <input type="text" name="title" id="title" placeholder="">
+                        <label for="title">Title</label>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <input type="text" name="author" id="author" placeholder="">
+                            <label for="author">Author</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="number" name="year" id="year" placeholder="">
+                            <label for="year">Year</label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="isRead" id="isRead">
+                        <label for="isRead">Read</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Save</button>
+                </form>
+            </div>
+            <div class="search-wrapper">
+                <h2>Search Book</h2>
+                <form id="searchForm" action="" method="post">
+                    <div class="input-group">
+                        <input type="text" name="search" id="search" placeholder="">
+                        <label for="search">Search Book</label>
+                    </div>
+                    <div class="search-buttons">
+                        <button type="reset" class="btn-reset"><i class='bx bx-reset'></i></button>
+                        <button type="submit" class="btn-search"><i class='bx bx-search-alt-2'></i></button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="book-section">
+            <div class="book-list unread">
+                <h2>Unread Books</h2>
+                <div id="unreadBooks"></div>
+            </div>
+            <div class="book-list read">
+                <h2>Read Books</h2>
+                <div id="readBooks"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

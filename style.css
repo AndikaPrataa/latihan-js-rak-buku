@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: hsl(217, 91%, 60%);
+  --secondary-color: hsl(215, 20%, 65%);
+  --background-color: rgb(248, 250, 252);
+  --text-color: rgb(51, 65, 85);
+  --dark-color: rgb(15, 23, 42);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-section, .book-section {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-wrapper, .search-wrapper, .book-list {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(15, 23, 42, 0.1);
+}
+
+.form-wrapper {
+  flex: 3;
+}
+
+.search-wrapper {
+  flex: 2;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: 1rem;
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: var(--secondary-color);
+  transition: 0.3s;
+}
+
+.input-group input:focus, .input-group input:not(:placeholder-shown) {
+  border-color: var(--primary-color);
+}
+
+.input-group input:focus ~ label, .input-group input:not(:placeholder-shown) ~ label {
+  top: 0;
+  left: 0.75rem;
+  background: #fff;
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  padding: 0 0.25rem;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-group label {
+  color: var(--primary-color);
+}
+
+.checkbox-group input, .checkbox-group label {
+  cursor: pointer;
+}
+
+.btn-submit {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: hsl(217, 91%, 50%);
+}
+
+.search-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.btn-reset, .btn-search {
+  padding: 0.5rem;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: background-color 0.3s;
+}
+
+.btn-search {
+  background-color: var(--primary-color);
+}
+
+.btn-reset:hover {
+  background-color: hsl(215, 20%, 55%);
+}
+
+.btn-search:hover {
+  background-color: hsl(217, 91%, 50%);
+}
+
+.book-list {
+  flex: 1;
+}
+
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-title {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.book-author {
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.book-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+}
+
+.delete-btn:hover {
+  background-color: hsl(0, 84%, 50%);
+}
+
+.finish-btn {
+  background-color: #22c55e;
+}
+
+.finish-btn:hover {
+  background-color: hsl(142, 71%, 40%);
+}
+
+.return-btn {
+  background-color: #facc15;
+}
+
+.return-btn:hover {
+  background-color: hsl(48, 96%, 47%);
+}
+
+.alert {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: #22c55e;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  z-index: 1000;
+  transition: 0.5s;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .input-section, .book-section {
+    flex-direction: column;
+  }
+}
